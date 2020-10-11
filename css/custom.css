@@ -1,12 +1,42 @@
-html, body{
+body{
     margin:0px; padding:0px;
     color: #fff;
 }
 
-section {
-    /* background-image: url(../images/backimg_fude.png); */
-    background-color: #000;
+.jumbotron {
+    position: relative; 
+}
+.jumbotron.shinjapan::before,
+.jumbotron.work-introduction::before,
+.jumbotron.work::before,
+.jumbotron.profire::before,
+.jumbotron.news::before,
+.jumbotron.contact::before{
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+.top-page {
+    background-image: url(../images/section1-back-4.png), url(../images/section1-back-3.png), url(../images/section1-back-2.png), url(../images/section1-back-1.png);
     background-size: cover;
+}
+.shinjapan,.work-introduction,.profire {
+    background-image: url(../images/backimg_mori.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.work,.news,.contact {
+    background-image: url(../images/backimg_fude.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .container {
@@ -14,18 +44,15 @@ section {
     padding: 100px 0;
 }
 
+.box {
+    position: relative;
+}
+
 .section-title {
-    /* padding: 100px 0; */
     margin-bottom: 80px;
 }
 
-.box {
-    padding: 0 auto;
-}
-
-
 .card {
-    /* top: 100px; */
     background-color: transparent;
 }
 
@@ -49,16 +76,29 @@ section {
     margin-top: 20px;
 }
 
-.profile-img {
+.profire-img {
     height: 590px;
     margin-right: 80px;
 }
 
-.profile-text {
+.profire-text {
     line-height: 2.5em;
     font-size: 14px;
 }
 
 .form-group {
     margin-bottom: 40px;
+}
+
+.btn {
+    color: #fff;
+}
+
+.calligrapher {
+    color: #ff0000;
+}
+
+.profire-name{
+    font-size: 3.5em;
+    margin-bottom: 20px;
 }
